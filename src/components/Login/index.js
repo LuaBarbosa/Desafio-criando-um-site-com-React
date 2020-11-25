@@ -12,7 +12,10 @@ export function Login(props) {
   return (
     <div className="login">
       {token !== null ? (
-        <button onClick={() => setToken(null)}> <Home /> </button>
+        <button onClick={() => setToken(null)}>
+          {" "}
+          <Home />{" "}
+        </button>
       ) : (
         <form
           onSubmit={(event) => {
