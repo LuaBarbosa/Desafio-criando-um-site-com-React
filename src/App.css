@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100;1,600&display=swap");
+* {
+  margin: 10px;
+  padding: 10px;
+}
+
+body {
+  background-color: #f7f7f7;
+  align-items: center;
+  font: Montserrat;
+}
+
+.login label {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 405px;
+  height: 507px;
+  left: 480px;
+  top: 106px;
+  background: #ffffff;
+  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+.login input {
+  height: 20px;
+  left: 41.51%;
+  right: 47.44%;
+  top: 279px;
+  line-height: 20px;
+  color: #a5a5a5;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.inputEnvelop {
+  position: relative;
+}
+
+.inputEnvelop img {
+  position: absolute;
+
+  left: 160px;
+}
+
+.login button {
+  padding: 11px 60px;
+  background: rgba(218, 1, 117, 0.35);
+  border-radius: 20px;
+  width: 166px;
+  height: 39px;
+  left: 600px;
+  top: 502px;
+  border: none;
+  color: white;
+}
