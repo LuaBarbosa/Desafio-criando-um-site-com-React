@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Login from "../Pages/Login";
 import Home from "../Pages/Home";
+import Cadastro from "../Pages/Cadastro";
 
 function useAuth() {
   const [logged, setLogged] = React.useState(true);
@@ -31,6 +32,7 @@ export default function Routes() {
     <Switch>
       <Route exact path="/" component={Login} />
       <Route exact path="/home" component={Home} />
+      <Route exact path="/usuario" component={Cadastro} />
     </Switch>
   );
 }
