@@ -2,6 +2,7 @@ import React from "react";
 import { fazerRequisicaoComBody } from "../../utills/fetch";
 import { BrowserRouter } from "react-router-dom";
 import History from "../../history";
+import style from "../Login/style.css";
 
 import Logo from "../Login/Logo.svg";
 import Olho from "./olho.svg";
@@ -9,7 +10,7 @@ import OlhoC from "./olhoc.svg";
 
 export default function Login() {
   const [email, setEmail] = React.useState("");
-  const [Senha, setSenha] = React.useState("");
+  const [senha, setSenha] = React.useState("");
   const [token, setToken] = React.useState("null");
   const [senhaVisivel, setSenhaVisivel] = React.useState(false);
 
@@ -19,22 +20,28 @@ export default function Login() {
         <form
           onSubmit={(event) => {
             event.preventDefault();
-            console.log(email, Senha);
             fazerRequisicaoComBody(
               "https://cubos-desafio-4.herokuapp.com/auth",
               "POST",
-              { email, Senha }
+              { email, senha }
             )
               .then((res) => res.json())
               .then((resposta) => {
+                console.log(resposta);
                 const token = resposta.dados.token;
-                setToken(token);
-                History.push("/home");
+                if (token) {
+                  setToken(token);
+
+                  History.push("/home");
+                } else {
+                  alert(" Erro ");
+                }
               });
           }}
         >
           <label>
             <img src={Logo} />
+            <div className="dadosLogin"></div>
             E-mail
             <input
               type="email"
@@ -51,12 +58,21 @@ export default function Login() {
                 className="login"
                 type={senhaVisivel ? "text" : "password"}
               />
-              <img src={Olho} alt="Ver Senha" />
+              <img
+                src={senhaVisivel ? OlhoC : Olho}
+                onClick={() => {
+                  setSenhaVisivel(!senhaVisivel);
+                }}
+                alt="Ver Senha"
+              />
             </div>
             Esqueci a senha
             <button>Entrar</button>
           </label>
-          Não tem conta? <button className="cadastre-se"> Cadastre-se!</button>
+          <div className="cadastre">
+            Não tem conta?{" "}
+            <button className="cadastre-se"> Cadastre-se!</button>
+          </div>
         </form>
       </BrowserRouter>
     </div>
