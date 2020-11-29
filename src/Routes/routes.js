@@ -32,7 +32,7 @@ export default function Routes() {
     <Switch>
       <Route exact path="/" component={Login} />
       <Route exact path="/home" component={Home} />
-      <Route exact path="/usuario" component={Cadastro} />
+      <Route exact path="/usuarios" component={Cadastro} />
     </Switch>
   );
 }
