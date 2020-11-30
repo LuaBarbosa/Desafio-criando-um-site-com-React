@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "../Pages/Login";
 import Home from "../Pages/Home";
 import Cadastro from "../Pages/Cadastro";
+import Clientes from "../Pages/Clientes";
 
 function useAuth() {
   const [logged, setLogged] = React.useState(true);
@@ -33,6 +34,7 @@ export default function Routes() {
       <Route exact path="/" component={Login} />
       <Route exact path="/home" component={Home} />
       <Route exact path="/usuarios" component={Cadastro} />
+	  <Route exact path="/clientes" component={Clientes} />
     </Switch>
   );
 }
