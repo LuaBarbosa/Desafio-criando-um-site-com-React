@@ -1,15 +1,16 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Login from "../Pages/Login";
 import Home from "../Pages/Home";
 import Cadastro from "../Pages/Cadastro";
 import Clientes from "../Pages/Clientes";
+import CriarCliente from "../Pages/Criar Cliente";
 
-function useAuth() {
-  const [logged, setLogged] = React.useState(true);
-  return { logged, setLogged };
-}
+//function useAuth() {
+// const [logged, setLogged] = React.useState(true);
+// return { logged, setLogged };
+//}
 
 //function RotaProtegida({ children, ...props }) {
 //const { logged } = useAuth();
@@ -34,7 +35,8 @@ export default function Routes() {
       <Route exact path="/" component={Login} />
       <Route exact path="/home" component={Home} />
       <Route exact path="/usuarios" component={Cadastro} />
-	  <Route exact path="/clientes" component={Clientes} />
+      <Route exact path="/clientes" component={Clientes} />
+      <Route exact path="/criarClientes" component={CriarCliente} />
     </Switch>
   );
 }
