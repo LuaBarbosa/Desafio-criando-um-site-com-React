@@ -1,0 +1,43 @@
+.paginaP {
+  display: flex;
+  background-color: #263238;
+  color: white;
+}
+.barraLateral {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.barraLateral button {
+  background: #da0175;
+  border-radius: 20px;
+  border: none;
+  width: 200px;
+  height: 39px;
+  align-items: center;
+  color: white;
+  margin: 20px;
+  margin-top: 200px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 150px;
+  margin-top: 100px;
+}
+
+.menu a:link {
+  text-decoration: none;
+  display: flex;
+  margin: 10px;
+}
+
+.menu a:hover {
+  background-color: #374952;
+  color: white;
+}
