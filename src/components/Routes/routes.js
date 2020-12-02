@@ -8,7 +8,6 @@ import Clientes from "../../Pages/Clientes";
 import CriarCliente from "../../Pages/Criar Cliente";
 import Cobrancas from "../../Pages/Cobranças";
 import Home from "../../Pages/Home";
-import StoreProvider from "../Store/Provider";
 
 export default function Routes() {
   return (
