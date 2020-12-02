@@ -1,31 +1,43 @@
 import React from "react";
+import "./style.css";
 
-import logout from "./logout.svg";
-import css from "./style.css";
-import Logo from "./logo.svg";
-import home from "./home.svg";
-import cobranças from "./cobrancas.svg";
-import clientes from "./clientes.svg";
+import cobranças from "../../assets/money.svg";
+import clientes from "../../assets/users.svg";
+import faturamento from "../../assets/faturamento.svg";
+import PaginaPrincipal from "../Pagina Principal";
+import Header from "../Header";
 
 export default function Home(props) {
   return (
     <div className="Home">
-      <div className="barraLateral">
-        <label>
-          <img src={Logo} />
-          <div className="menu">
-            <img src="home" /> Home
-            <img src="cobrancas" /> Cobranças
-            <img src="clientes" /> Clientes
-          </div>
-          <button>Criar cobranças</button>
-        </label>
-      </div>
-      <div className="corpoPrincipal">
+      <PaginaPrincipal />
+      <div className="conteudo">
         <div className="header">
-          <label className="fundo">
-            <label className="saldo">Saldo em conta R$ 0,00</label>
-            <img src={logout} />
+          <Header />
+        </div>
+        <div className="abaFiltros">
+          <button>Este mês</button>
+          <button>Este ano</button>
+          <button>Desde o inicio</button>
+        </div>
+        <div className="cards">
+          <label className="cardCliente">
+            <div className="headerCardC">
+              <img src={clientes} /> <h2>Clientes</h2>
+            </div>
+            <div className="emDia">
+              {" "}
+              Em dia <h2>0</h2>
+            </div>
+            <div className="inadimplentes">Inadimplentes 0</div>
+          </label>
+          <label className="cardCobrancas">
+            <div className="headerCardCo">
+              <img src={cobranças} /> <h2>Cobranças</h2>
+            </div>
+            <div className="previstas">Previstas 0</div>
+            <div className="vencidas"></div>
+            <div className="pagas"></div>
           </label>
         </div>
       </div>
