@@ -1,10 +1,10 @@
 import React from "react";
 import Context from "./Context.js";
 
-const StoreProvider = ({ Children }) => {
+const StoreProvider = ({ children }) => {
   const [token, setToken] = React.useState();
   return (
-    <Context.Provider value={{ token, setToken }}>{Children}</Context.Provider>
+    <Context.Provider value={{ token, setToken }}>{children}</Context.Provider>
   );
 };
 
