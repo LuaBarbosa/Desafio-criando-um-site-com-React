@@ -1,28 +1,33 @@
-import React from "react";
-import { fazerRequisicaoComBody } from "../../utills/fetch";
+import React, { useContext } from "react";
+import { fazerRequisicao } from "../../utills/fetch";
 
 import "./style.css";
 import history from "../../utills/history";
 import PaginaPrincipal from "../Pagina Principal";
 import Header from "../Header";
+import StoreContext from "../../components/Store/Context";
 
 import lupa from "../../assets/lupa.svg";
 
 export default function Clientes() {
   const [clientes, setClientes] = React.useState();
+  const { token } = useContext(StoreContext);
 
   React.useEffect(() => {
-    fazerRequisicaoComBody(
-      "https://cubos-desafio-4.herokuapp.com//clientes?clientesPorPagina=10&offset=20"
+    fazerRequisicao(
+      "https://cubos-desafio-4.herokuapp.com/clientes?clientesPorPagina=10&offset=0",
+      "GET",
+      token
     )
       .then((res) => res.json())
       .then((resposta) => {
         console.log(resposta);
-        if (resposta.status === "Sucesso") {
-          setClientes(resposta.dados);
+        if (resposta.status === "sucesso") {
+          setClientes(resposta.dados.clientes);
         }
       });
   }, []);
+  console.log(clientes, "clientes");
   return (
     <div className="Clientes">
       <PaginaPrincipal />
@@ -58,14 +63,34 @@ export default function Clientes() {
             </thead>
             <tbody>
               {clientes &&
-                clientes.dados.map((clientes) => (
+                clientes.map((cliente) => (
                   <tr>
-                    <td>{clientes.nome}</td>
-                    <td>{clientes.email}</td>
-                    <td>{clientes.telefone}</td>
-                    <td>{clientes.cobrancasFeitas}</td>
-                    <td>{clientes.cobrancasRecebidas}</td>
-                    <td>{clientes.estaInadimplente}</td>
+                    <td>
+                      {cliente.nome}
+                      {cliente.email}
+                      {cliente.telefone}
+                    </td>
+                    <td>
+                      {Number(cliente.cobrancasFeitas || "0").toLocaleString(
+                        "pt-br",
+                        {
+                          style: "currency",
+                          currency: "BRL",
+                        }
+                      )}
+                    </td>
+                    <td>
+                      {Number(cliente.cobrancasRecebidas || "0").toLocaleString(
+                        "pt-br",
+                        {
+                          style: "currency",
+                          currency: "BRL",
+                        }
+                      )}
+                    </td>
+                    <td>
+                      {cliente.estaInadimplente ? "Inadimplente" : "Em dias"}
+                    </td>
                   </tr>
                 ))}
             </tbody>
