@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 
 import { fazerRequisicaoComBody } from "../../utills/fetch";
 import StoreContext from "../../components/Store/Context";
+import History from "../../utills/history";
 
 import "./style.css";
 import PaginaPrincipal from "../Pagina Principal";
@@ -11,69 +12,65 @@ export default function CriarCliente() {
   const [cpf, setCpf] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [telefone, setTelefone] = React.useState("");
-  const { setToken } = useContext(StoreContext);
-
-  const token = React.useContext(StoreContext);
+  const { token } = useContext(StoreContext);
 
   return (
-    <div className="criarCliente">
+    <div className="paginaAddC">
       <div className="menu">
         <PaginaPrincipal />
       </div>
 
-      <div className="formClientes">
+      <div className="criarCliente">
         <form
           onSubmit={(event) => {
             event.preventDefault();
             fazerRequisicaoComBody(
               "https://cubos-desafio-4.herokuapp.com/clientes",
               "POST",
-              { nome, CPF: cpf, email, telefone }
+              { nome, cpf, email, tel: telefone },
+              token
             )
               .then((res) => res.json())
               .then((resposta) => {
                 console.log(resposta);
                 const id = resposta.dados.id;
-                const token = resposta.dados.token;
-                if (id && token) {
-                  setToken(token);
-                  alert("Cliente cadastrado com sucesso!");
-                  History.push("/clientes");
-                } else {
-                  alert(" Dados incorretos ");
-                }
+                alert("Cliente cadastrado com sucesso!");
+                History.push("/clientes");
               });
           }}
         >
           <div className="cadastrarCliente">
-            Nome{" "}
-            <input
-              type="text"
-              value={nome}
-              onChange={(event) => setNome(event.target.value)}
-            />
-            E-mail{" "}
-            <input
-              type="email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-            />
-            CPF{" "}
-            <input
-              type="text"
-              value={cpf}
-              onChange={(event) => setCpf(event.target.value)}
-            />
-            Telefone{" "}
-            <input
-              type="text"
-              value={telefone}
-              onChange={(event) => setTelefone(event.target.value)}
-            />
-          </div>
-          <div className="confirmarCadastro">
-            <button>Cancelar</button>
-            <button>Adicionar Cliente</button>
+            <label className="cadastroC">
+              <b>Nome</b>
+              <input
+                type="text"
+                value={nome}
+                onChange={(event) => setNome(event.target.value)}
+              />
+              E-mail{" "}
+              <input
+                type="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+              />
+              CPF{" "}
+              <input
+                type="text"
+                value={cpf}
+                onChange={(event) => setCpf(event.target.value)}
+              />
+              Telefone{" "}
+              <input
+                type="tel"
+                value={telefone}
+                onChange={(event) => setTelefone(event.target.value)}
+              />
+            </label>
+
+            <div className="confirmarCadastro">
+              <button>Cancelar</button>
+              <button>Adicionar Cliente</button>
+            </div>
           </div>
         </form>
       </div>
