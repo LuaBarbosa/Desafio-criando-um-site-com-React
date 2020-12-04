@@ -1,0 +1,168 @@
+.Home {
+  display: flex;
+  flex-direction: row;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+}
+.abaFiltros {
+  border-bottom: 1px solid #263238;
+  border: center;
+  top: 292px;
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  padding: 20px;
+  margin: 60px;
+  color: #667e87;
+}
+
+.abaFiltros button {
+  border: none;
+  color: #667e87;
+  background-color: transparent;
+  font-size: 16px;
+  margin: 0px;
+}
+.abaFiltros button:hover {
+  border-bottom: 1px solid #263238;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.headerCardC {
+  background: #374952;
+  border-radius: 16px 16px 0px 0px;
+  width: 410px;
+  height: 80px;
+  font-family: Montserrat;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.cardCliente {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 410px;
+  height: 352px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+.emDia {
+  border: 2px solid #4ec06e;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 266px;
+  height: 80px;
+  flex-direction: column;
+  margin: 20px;
+  color: #4ec06e;
+  font-weight: 600;
+  font-size: 14px;
+  align-items: center;
+}
+.inadimplentes {
+  flex-direction: column;
+  border: 2px solid #ff4d4d;
+  border-radius: 8px;
+  width: 266px;
+  height: 80px;
+  margin: 20px;
+  color: #ff4d4d;
+  font-style: normal;
+}
+
+.headerCardCo {
+  background: #374952;
+  border-radius: 16px 16px 0px 0px;
+  width: 410px;
+  height: 80px;
+  font-family: Montserrat;
+  font-size: 20px;
+  color: white;
+  display: flex;
+
+  justify-content: center;
+}
+
+.cardCobrancas {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 410px;
+  height: 448px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+.vencidas {
+  flex-direction: column;
+  border: 2px solid #ff4d4d;
+  border-radius: 8px;
+  width: 266px;
+  height: 80px;
+  margin: 20px;
+  margin-left: 40px;
+  color: #ff4d4d;
+  font-style: normal;
+}
+.pagas {
+  border: 2px solid #4ec06e;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 266px;
+  height: 80px;
+  flex-direction: column;
+  margin: 20px;
+  margin-left: 40px;
+  color: #4ec06e;
+  font-weight: 600;
+  font-size: 14px;
+  align-items: center;
+}
+.previstas {
+  border: 2px solid #5197b5;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 266px;
+  height: 80px;
+  flex-direction: column;
+  margin: 20px;
+  margin-left: 40px;
+  color: #5197b5;
+  font-weight: 600;
+  font-size: 14px;
+  align-items: center;
+}
+
+.headerCardF {
+  background: #374952;
+  border-radius: 16px 16px 0px 0px;
+  height: 80px;
+  font-family: Montserrat;
+  font-size: 20px;
+  color: white;
+  display: flex;
+}
+.cardFaturamento {
+  display: flex;
+  flex-direction: column;
+  width: 780px;
+  height: 803px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin-top: 20px;
+  font-size: 20px;
+}
