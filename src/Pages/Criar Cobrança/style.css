@@ -1,0 +1,92 @@
+.criarCobranca {
+  display: flex;
+  flex-direction: row;
+}
+
+.conteudo {
+  display: flex;
+  justify-content: center;
+}
+
+.logout {
+  display: flex;
+  justify-content: center;
+}
+.formulario {
+  display: flex;
+  justify-content: center;
+}
+
+.cobranca {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 100px;
+  text-align: left;
+  align-items: center;
+}
+
+.formulario span {
+  text-align: left;
+  font-size: 24px;
+}
+.inputNomeDesc {
+  display: flex;
+  flex-direction: column;
+  color: #374952;
+  font-size: 16px;
+}
+.inputNomeDesc span {
+  color: #868686;
+  font-size: 12px;
+}
+
+.inputNomeDesc input {
+  width: 512px;
+  height: 40px;
+  border: 1px solid #374952;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.inputMenor {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 30px;
+}
+
+.inputMenor input {
+  border: 1px solid #374952;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 180px;
+  height: 40px;
+}
+
+.inputVencimento {
+  display: flex;
+  flex-direction: column;
+  color: #374952;
+  font-size: 16px;
+}
+.inputVencimento input {
+  width: 280px;
+  height: 40px;
+  border: 1px solid #374952;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.criar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.criar button {
+  background: rgba(218, 1, 117, 0.35);
+  border-radius: 20px;
+  color: white;
+  width: 106px;
+  height: 17px;
+}
