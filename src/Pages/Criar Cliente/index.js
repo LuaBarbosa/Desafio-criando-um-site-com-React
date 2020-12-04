@@ -25,7 +25,7 @@ export default function CriarCliente() {
           onSubmit={(event) => {
             event.preventDefault();
             fazerRequisicaoComBody(
-              "https://cubos-desafio-4.herokuapp.com/clientes",
+              "https://pagamentos-back.herokuapp.com/clientes",
               "POST",
               { nome, cpf, email, tel: telefone },
               token
