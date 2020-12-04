@@ -1,0 +1,67 @@
+.paginaAddC {
+  display: flex;
+  
+}
+
+.menu {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.criarCliente {
+  display: flex;
+}
+
+.cadastrarCliente {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 30px;
+  border-radius: 16px;
+  margin-left: 200px;
+}
+
+.cadastroC {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 60px;
+  margin-top: 30px;
+  width: auto;
+  height: 452px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.criarCliente {
+  display: flex;
+}
+
+.cadastrarCliente {
+  display: flex;
+  justify-content: center;
+}
+
+.cadastroC input {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #374952;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 40px;
+  width: 512px;
+  margin: 30px;
+}
+.confirmarCadastro button {
+  background-color: rgba(218, 1, 117, 0.35);
+  border-radius: 20px;
+  border: none;
+  width: 245px;
+  height: 39px;
+  color: white;
+}
