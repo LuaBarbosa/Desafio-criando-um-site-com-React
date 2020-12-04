@@ -1,0 +1,66 @@
+.cobrancas {
+  display: flex;
+  flex-direction: row;
+  background-color: #f7f7f7;
+}
+
+.corpoP {
+  display: flex;
+  flex-direction: column;
+}
+
+.buscar {
+  position: relative;
+}
+.buscar button {
+  border: none;
+  width: 124px;
+  height: 40px;
+  color: #ffffff;
+  position: absolute;
+  left: 280px;
+  top: 2px;
+  border-radius: 8px;
+  background-color: #374952;
+}
+
+.buscar input {
+  width: 400px;
+  height: 40px;
+  border: 1px solid #374952;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: Montserrat;
+  color: #868686;
+}
+
+.todasCobrancas {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.tabela {
+  height: 32px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  color: #4c4c4c;
+}
+
+.tabela thead {
+  color: white;
+  background-color: #9dbbc3;
+  border-radius: 8px;
+  border: none;
+}
+
+.tabela tbody {
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 958px;
+  height: 131px;
+}
