@@ -31,7 +31,13 @@ export default function PaginaPrincipal() {
             Clientes
           </Link>
         </div>
-        <button>Criar cobranças</button>
+        <button
+          onClick={() => {
+            history.push("/criarCobranca");
+          }}
+        >
+          Criar cobrança
+        </button>
       </div>
     </div>
   );
