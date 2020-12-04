@@ -1,0 +1,53 @@
+.cadastro {
+  display: flex;
+  justify-content: center;
+}
+
+.cadastro label {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 405px;
+  height: 507px;
+  left: 480px;
+  top: 106px;
+  background: #ffffff;
+  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  color: #263238;
+}
+.cadastro input {
+  width: 261px;
+  height: 30px;
+  left: 552px;
+  top: 423px;
+  line-height: 20px;
+  color: #a5a5a5;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.inputEnvelop {
+  position: relative;
+}
+
+.inputEnvelop img {
+  position: absolute;
+  top: 30px;
+  left: 260px;
+}
+
+.cadastro button {
+  padding: 11px 60px;
+  background: rgba(218, 1, 117, 0.35);
+  border-radius: 20px;
+  width: 166px;
+  height: 39px;
+  left: 600px;
+  top: 502px;
+  border: none;
+  color: white;
+  align-items: center;
+}
