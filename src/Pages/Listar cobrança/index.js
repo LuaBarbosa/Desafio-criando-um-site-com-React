@@ -22,7 +22,13 @@ export default function ListarCobranca(props) {
                 <td>{cobranca.descricao}</td>
                 <td>{cobranca.valor}</td>
                 <td>{cobranca.status}</td>
-                <td>{cobranca.vencimento}</td>
+                <td>
+                  {cobranca.vencimento
+                    .split("T")[0]
+                    .split("-")
+                    .reverse()
+                    .join("/")}
+                </td>
                 <td>
                   <button>
                     <img src={boleto} alt="Visualizar boleto" />
