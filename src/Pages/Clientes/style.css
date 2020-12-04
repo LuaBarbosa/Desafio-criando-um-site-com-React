@@ -1,0 +1,61 @@
+.Clientes {
+  display: flex;
+  flex-direction: row;
+  background-color: #f7f7f7;
+}
+
+.corpoP {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerC button {
+  border: 1.5px solid #da0175;
+  color: #da0175;
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 20px;
+  width: 242px;
+  height: 39px;
+  font-size: 14px;
+  font-family: Montserrat;
+  font-weight: 100;
+}
+
+.headerC {
+  display: flex;
+}
+
+.buscar {
+  position: relative;
+}
+
+.buscar button {
+  border: none;
+  width: 124px;
+  height: 40px;
+  color: #ffffff;
+  position: absolute;
+  left: 280px;
+  top: 2px;
+  border-radius: 8px;
+  background-color: #374952;
+}
+
+.buscar input {
+  width: 400px;
+  height: 40px;
+  border: 1px solid #374952;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: Montserrat;
+  color: #868686;
+}
+
+.todosClientes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
