@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
 
-import logout from "../../assets/logout.svg";
 import saldo from "../../assets/saldo.svg";
+import Logout from "../Logout";
 
 export default function Header() {
   return (
@@ -12,7 +12,7 @@ export default function Header() {
         Saldo em conta
         <p>R$ 0,00</p>
       </label>
-      <img src={logout} alt="logout" />
+      <Logout />
     </div>
   );
 }
