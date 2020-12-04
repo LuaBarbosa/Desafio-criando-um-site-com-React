@@ -19,10 +19,15 @@ export default function Cadastro() {
       <form
         onSubmit={(event) => {
           event.preventDefault();
+          console.log(name, email, password);
           fazerRequisicaoComBody(
-            "https://cubos-desafio-4.herokuapp.com/usuarios",
+            "https://pagamentos-back.herokuapp.com/usuarios",
             "POST",
-            { nome: name, email, senha: password }
+            {
+              nome: name,
+              email,
+              senha: password,
+            }
           )
             .then((res) => res.json())
             .then((resposta) => {
@@ -34,6 +39,9 @@ export default function Cadastro() {
               } else {
                 alert(" Dados incorretos ");
               }
+            })
+            .catch((error) => {
+              console.log(error);
             });
         }}
       >
