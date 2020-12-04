@@ -8,7 +8,7 @@ import Clientes from "../../Pages/Clientes";
 import CriarCliente from "../../Pages/Criar Cliente";
 import Cobrancas from "../../Pages/Cobranças";
 import Home from "../../Pages/Home";
-import CriarCobrancas from "../../Pages/CriarCobrança";
+
 import CriarCobranca from "../../Pages/Criar Cobrança";
 
 export default function Routes() {
