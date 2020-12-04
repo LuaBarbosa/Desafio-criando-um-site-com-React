@@ -21,7 +21,7 @@ export default function Login() {
         onSubmit={(event) => {
           event.preventDefault();
           fazerRequisicaoComBody(
-            "https://cubos-desafio-4.herokuapp.com/auth",
+            "https://pagamentos-back.herokuapp.com/auth",
             "POST",
             { email, senha }
           )
