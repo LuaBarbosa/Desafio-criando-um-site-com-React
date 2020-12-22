@@ -16,7 +16,7 @@ export default function BuscarCliente(props) {
         onChange={handleChange}
       />
       <button>
-        <img src={lupa} />
+        <img src={lupa} alt={"Buscar por cobranças"} />
         BUSCAR
       </button>
     </div>
