@@ -10,6 +10,9 @@ import Cobrancas from "../../Pages/Cobranças";
 import Home from "../../Pages/Home";
 
 import CriarCobranca from "../../Pages/Criar Cobrança";
+import EditarCliente from "../../Pages/Editar Cliente";
+
+("/editar-cliente");
 
 export default function Routes() {
   return (
@@ -21,6 +24,7 @@ export default function Routes() {
       <RoutesPrivate exact path="/criarClientes" component={CriarCliente} />
       <RoutesPrivate exact path="/cobrancas" component={Cobrancas} />
       <RoutesPrivate exact path="/criarCobranca" component={CriarCobranca} />
+      <RoutesPrivate exact path="/editarCliente" component={EditarCliente} />
     </Switch>
   );
 }
