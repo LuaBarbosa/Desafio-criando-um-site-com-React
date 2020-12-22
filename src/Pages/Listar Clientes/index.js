@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import envelope from "../../assets/envelope.svg";
 import tel from "../../assets/phone.svg";
@@ -49,7 +49,14 @@ export default function ListarClientes(props) {
                 </td>
                 <td>{cliente.estaInadimplente ? "Inadimplente" : "Em dia"}</td>
                 <td>
-                  <img src={editar} />
+                  <button
+                    onClick={() => {
+                      setIdEditado(cliente.id);
+                      history.push("/editar-cliente");
+                    }}
+                  >
+                    <img src={editar} />
+                  </button>
                 </td>
               </tr>
             ))}
