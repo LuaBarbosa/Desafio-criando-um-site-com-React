@@ -46,7 +46,7 @@ export default function Cadastro() {
         }}
       >
         <label>
-          <img src={Logo} />
+          <img src={Logo} alt="Logo da Cubos Academy" />
           Nome
           <input
             type="text"
@@ -77,9 +77,9 @@ export default function Cadastro() {
           </div>
           <button> Criar Conta </button>
         </label>
-        Ja possui conta?
+
         <div className="acesse">
-          <Link to="/">Acesse agora</Link>
+          Ja possui conta?<Link to="/">Acesse agora</Link>
         </div>
       </form>
     </div>
